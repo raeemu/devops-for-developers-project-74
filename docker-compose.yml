@@ -2,7 +2,8 @@ version: "3.8"
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+    image: raeemu/devops-for-developers-project-74
     command: make test
-    volumes:
-      - ./app:/app
